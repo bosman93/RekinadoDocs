@@ -10,10 +10,12 @@ Używany przez symulację model tornada został stworzony przez Williama Johna M
 \end{figure} 
 
 Zależności z wykresu przedstawionego na rysunku~\ref{fig:rankine1} reprezentowane są za pomocą równań współrzędnych biegunowych. Prędkość trawersalna (prędkość przemieszczania się w kierunku prostopadłym do promienia) opisana jest wzorem:
-$$ V_{\varphi}(r) =  \left\{ \begin{array}{ll}
+\begin{equation}
+V_{\varphi}(r) =  \left\{ \begin{array}{ll}
 \frac{V_{\varphi  max}\cdot r}{R_{max}} & \textrm{gdy $r \leq R_{max}$}\\
 \frac{V_{\varphi  max}\cdot R_{max}}{r} & \textrm{gdy $r > R_{max}$}\\
-\end{array} \right.$$
+\end{array} \right.
+\end{equation}
 
 gdzie
 
@@ -26,10 +28,12 @@ gdzie
 
 Podobnie do prędkości trawersalnej została opisana prędkość radialna. Różnicą jest to, iż iloraz promieni jest podniesiony do potęgi o wykładniku $0.6$. Stała ta została wyznaczona doświadczalnie za pomocą przenośnego radaru Dopplera~\cite{hb_doppler}.
 
-$$ V_{r}(r) =  \left\{ \begin{array}{ll}
+\begin{equation}
+V_{r}(r) =  \left\{ \begin{array}{ll}
 V_{r  max}(\frac{r}{R_{max}})^{0.6} & \textrm{gdy $r \leq R_{max}$}\\
 V_{r  max}(\frac{R_{max}}{r})^{0.6} & \textrm{gdy $r > R_{max}$}\\
-\end{array} \right.$$
+\end{array} \right.
+\end{equation}
 
 gdzie
 
@@ -40,4 +44,11 @@ gdzie
   \item[$R_{max}$]-- maksymalny promień tornada
 \end{description}
 
-Te dwie wielkości opisują model statycznego tornada. Aby przeprowadzić symulację tornada przechodzącego przez las, wprowadzona jest dodatkowy wektor prędkości -- prędkość translacji $V_{trans}$.
+Te dwie wielkości opisują model statycznego tornada. Aby przeprowadzić symulację tornada przechodzącego przez las, wprowadzony jest dodatkowy wektor prędkości -- prędkość translacji $V_{trans}$. Prędkość wiatru w modelu będzie wypadkową wszystkich tych trzech wielkości, przy czym wypadkowa prędkości trawersalnej $V_{\varphi}$ oraz prędkości radialnej $V_r$ nazywana jest prędkością cyrkularną $V_{cir}$.
+
+\begin{figure}[!h]
+	\center
+	\includegraphics[scale=0.45]{rankine2}
+	\caption{Składowe prędkości modelu tornada oraz ich wypadkowe. Źródło:~\cite{dpfh_model}.}
+	\label{fig:rankine2}
+\end{figure} 

@@ -3,18 +3,16 @@
 Model łamliwości drzew HWIND powstał w celu wyznaczania maksymalnej prędkości wiatru przy których drzewo ulegnie złamaniu lub wyrwaniu (dla lasów sztucznie zalesianych). Został on opracowany dla sosny zwyczajnej i świerku pospolitego.
 
 \begin{figure}[!h]
-\label{fig:hwindScheme1}
-	\center
-	\includegraphics[scale=0.45]{HWIND1}
-	\caption{Rozkład sił działających na drzewo dla modelu HWIND. Źródło:~\cite{chm_mgza}.}
-
+\center
+\includegraphics[scale=0.45]{HWIND1}
+\caption{Rozkład sił działających na drzewo dla modelu HWIND. Źródło:~\cite{chm_mgza}.}
+\label{fig:hwind_forces}
 \end{figure} 
 
-Rysunek~\ref{fig:hwindScheme1} przedstawia siły działające na drzewo. Dokonany został podział na siły poziome i ~pionowe.
+Rysunek~\ref{fig:hwind_forces} przedstawia siły działające na drzewo. Dokonany został podział na siły poziome i ~pionowe.
 Pod naporem wiatru drzewo ugina się do momentu osiągnięcia punktu krytycznego, gdy siły nacisku (siła wiatru, siła grawitacji) zrównają się z ~siłami oporu (wytrzymałość pnia, wytrzymałość gleby wokół korzenia).
 
 W celu wyznaczenia maksymalnego momentu skręcającego i ~granicznej prędkości wiatru przy której nastąpi zniszczenie drzewa, podzielone zostały one na 1~metrowe segmenty, dla których wyznaczone zostaną wartości sił.
-
 
 \subsection{Siły nacisku}
 
@@ -31,14 +29,13 @@ gdzie
 	\item[$A(z)$]-- przewidywana wielkość korony drzewa stawiająca opór wiatrowi
 \end{description}
 
-W celu uproszczenia obliczeń dokonana została aproksymacja powierzchni korony drzewa przez trójkąt równoramienny (świerk pospolity). Pole powierzchni pnia jest reprezentowane przez prostokąt. Model ten przedstawia rysunek~\ref{fig:hwindScheme2}.
+W celu uproszczenia obliczeń dokonana została aproksymacja powierzchni korony drzewa przez trójkąt równoramienny (świerk pospolity). Pole powierzchni pnia jest reprezentowane przez prostokąt. Model ten przedstawia rysunek~\ref{fig:hwind_area}.
 
 \begin{figure}[!h]
-\label{fig:hwindScheme2}
-	\center
-	\includegraphics[scale=0.35]{HWIND2}
-	\caption{Model powierzchni stawiającej opór wiatrowi. $s_k$ oznacza szerokość korony, $h_k$ -- wysokość korony, $h_p$ -- wysokość pnia, $d_{bh}$ -- średnicę pnia, $d_y$ -- wycinek powierzchni o wysokości $1m$ użyty przy w modelu HWIND. Źródło:~\cite{chm_mgza}.}
-
+\center
+\includegraphics[scale=0.35]{HWIND2}
+\caption{Model powierzchni stawiającej opór wiatrowi. $s_k$ oznacza szerokość korony, $h_k$ -- wysokość korony, $h_p$ -- wysokość pnia, $d_{bh}$ -- średnicę pnia, $d_y$ -- wycinek powierzchni o wysokości $1m$ użyty przy w modelu HWIND. Źródło:~\cite{chm_mgza}.}
+\label{fig:hwind_area}
 \end{figure} 
 
 W modelu należy uwzględnić fakt, iż pod wpływem wiatru powierzchnia korony ulega zmniejszeniu~\cite{hpsk_hwind}. Redukcja powierzchni wynosi $20\%$ dla prędkości mniejszych od $11 \frac{m}{s}$, dla 
@@ -65,7 +62,6 @@ gdzie
 	\item[$m_c$] -- masa korony drzewa
 	\item[$g$] -- przyspieszenie ziemskie
 \end{description}
-
 
 \subsection{Maksymalny moment skręcający drzewa}
 

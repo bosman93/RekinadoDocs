@@ -1,0 +1,111 @@
+\section{Statystyki}
+
+W celu prezentacji statystyk przeprowadzone zostały wielokrotne przebiegi symulacji.
+Wyniki te pozwolą na określenie średniej wielkości zniszczeń i ekstremów.
+
+Pierwszy zestaw symulacji został przeprowadzony dla parametrów:
+\begin{itemize}
+\item Wymiary: $200m x 200m$
+\item Promień (max): $7m/s$
+\item Prędkość trawersalna (max): $12m/s$
+\item Prędkość radialna (max): $13m/s$
+\item Prędkość translacji: $14m/s$
+\item Punkt startowy: $(-8, -8)$
+\item Kąt przemieszczania się wiru: $45$ stopni
+\item Odstępy między drzewami: $9m$
+\item Rozkład drzew: Jednorodny
+\end{itemize}
+
+Wyniki przedstawia tabela~\ref{tab:sym1}:
+
+ \begin{table}[h!]
+ \caption{Wyniki dla rozkładu jednorodnego.}
+ \label{tab:sym1}
+ \begin{center}
+\begin{tabular} {|c|c|c|}
+\hline
+Wyrwane & Złamane & Początkowa liczba \\ \hline \hline
+$28$ 	& $47$	&	$529$ \\ \hline
+$37$ 	& $52$ 	&	$529$ \\ \hline
+$34$ 	& $53$ 	&	$529$ \\ \hline
+$46$ 	& $47$	&	$529$ \\ \hline
+$42$ 	& $60$	&	$529$ \\ \hline
+$34$ 	& $47$ 	&	$529$ \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+Analizując tabelę można stwierdzić, że stopień zniszczeń lasu dla zadanych parametrów nie jest duży. Średnia liczba wyrwanych drzew wyniosła około $37$ sztuk, w przypadku złamań: $51$. Największa liczba wyrwanych drzew jaka wystąpiła w przebiegach symulacji to $46$, najmniejsza: $28$. W przypadku złamań jest to odpowiednio $60$ i $47$.
+Średnio zniszczonych zostało $16.64\%$ drzew.
+
+Kolejny zestaw symulacji został przeprowadzony dla parametrów:
+\begin{itemize}
+\item Wymiary: $100m x 100m$
+\item Promień (max): $7m/s$
+\item Prędkość trawersalna (max): $12m/s$
+\item Prędkość radialna (max): $13m/s$
+\item Prędkość translacji: $14m/s$
+\item Punkt startowy: $(-8, -8)$
+\item Kąt przemieszczania się wiru: $45$ stopni
+\item Rozkład drzew: Losowy
+\end{itemize}
+
+Wyniki przedstawia tabela~\ref{tab:sym2}:
+
+ \begin{table}[h!]
+ \caption{Wyniki dla rozkładu losowego.}
+ \label{tab:sym2}
+ \begin{center}
+\begin{tabular} {|c|c|c|}
+\hline
+Wyrwane & Złamane & Początkowa liczba \\ \hline \hline
+$30$ 	& $32$ 	&	$100$ \\ \hline
+$23$ 	& $30$ 	&	$100$ \\ \hline
+$33$ 	& $30$ 	&	$100$ \\ \hline
+$27$ 	& $35$ 	&	$100$ \\ \hline
+$24$ 	& $28$ 	&	$100$ \\ \hline
+$26$ 	& $25$ 	&	$100$ \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+Stopień zniszczeń jest widocznie większy niż w poprzednich symulacjach. Spowodowane jest to głównie znacząco mniejszą liczbą drzew jak i nierównomiernym zagęszczeniem. Średnia liczba wyrwanych drzew wyniosła $27$, najmniejsza $23$, największa $33$. W przypadku złamanych drzew jest to odpowiednioi $30$, $25$, $35$.
+Średnio zniszczonych zostało $57\%$ drzew.
+
+Ostatni zestaw symulacji został przeprowadzony dla parametrów:
+\begin{itemize}
+\item Wymiary: $100m x 100m$
+\item Promień (max): $7m/s$
+\item Prędkość trawersalna (max): $12m/s$
+\item Prędkość radialna (max): $13m/s$
+\item Prędkość translacji: $14m/s$
+\item Punkt startowy: $(-8, -8)$
+\item Kąt przemieszczania się wiru: $45$ stopni
+\item Rozkład drzew: Plama
+\end{itemize}
+
+Wyniki przedstawia tabela~\ref{tab:sym3}:
+
+ \begin{table}[h!]
+ \caption{Wyniki dla rozkładu typu `plama'.}
+ \label{tab:sym3}
+ \begin{center}
+\begin{tabular} {|c|c|c|}
+\hline
+Wyrwane & Złamane & Początkowa liczba \\ \hline \hline
+$26$ 	& $21$ 	&	$100$ \\ \hline
+$14$ 	& $10$ 	&	$100$ \\ \hline
+$19$ 	& $50$ 	&	$100$ \\ \hline
+$11$ 	& $18$ 	&	$100$ \\ \hline
+$24$ 	& $31$ 	&	$100$ \\ \hline
+$7$ 	& $12$ 	&	$100$ \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Wyniki tych przebiegów są bardzo zróżnicowane. Wynika to ze sposobu generowania lasu - niekiedy mogło się zdarzyć, iż wir nie przechodził bezpośrednio przez las, lecz po jego krawędzi, co wpłynęło znacząco na stopień zniszczeń. 
+Średnia wyrwanych drzew: $17$, złamanych: $24$. Minimalna liczba wyrwanych to $7$ drzew, maksymalna $26$. Odpowiednio dla złamanych jest to $10$ i $50$.
+Średnio zniszczonych zostało $41\%$ drzew.
+

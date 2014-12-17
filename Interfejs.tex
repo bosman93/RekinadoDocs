@@ -7,9 +7,16 @@
 	\label{fig:gui_main}
 \end{figure} 
 
-Uruchamienie aplikacji symulacji powoduje wyświetlenie głównego okna programu (Rysunek~\ref{fig:gui_main}). W centralnej ramce ukazana jest wizualizacja zjawiska w rzucie izometrycznym. Ukazuje ona symboliczną strukturę lasu i położenie tornada. Drzewa nieuszkodzone mają pień koloru brązowego oraz zieloną koronę, drzewa złamane wizualizowane są w kolorze czerwonym, a drzewa przewrócone w kolorze niebieskim. W lewym górnym rogu ukazany jest rzut lasu z góry, który posiada taką samą konwencję kolorów jak wizualizacja 3D. Można na nim dokładniej zaobserwować kierunki działania wiatru tornada przy przewracaniu drzew.
+Uruchamienie aplikacji symulacji powoduje wyświetlenie głównego okna programu (Rysunek~\ref{fig:gui_main}). W centralnej ramce ukazana jest wizualizacja zjawiska w rzucie izometrycznym. Pokazuje ona symboliczną strukturę lasu i położenie tornada. Drzewa nieuszkodzone mają pień koloru brązowego oraz zieloną koronę, drzewa złamane wizualizowane są w kolorze czerwonym, a drzewa przewrócone w kolorze niebieskim. W lewym górnym rogu ukazany jest rzut lasu z góry, który posiada taką samą konwencję kolorów jak wizualizacja 3D. Można na nim dokładniej zaobserwować kierunki działania wiatru tornada przy przewracaniu drzew.
 
-Dodatkowo, przytrzymując przycisk \textbf{Wytrzymałość} możliwa jest wizualizacja potencjalnej wytrzymałości drzew wyliczana na podstawie otoczenia każdego z nich. Kolor niebieski oznacza najmniej wytrzymałe drzewo, czyli znajdujące się na skraju lasu i/lub nieposiadające bliskich sąsiadów. Im korona bardziej przechodzi w kolor czerwony, drzewo klasyfikowane jest jako bardziej wytrzymałe dzięki tłumieniu wiatru przez drzewa położone w najbliższym jego otoczeniu.
+Dodatkowo, przytrzymując przycisk \textbf{Wytrzymałość} możliwa jest wizualizacja potencjalnej wytrzymałości drzew wyliczana na podstawie otoczenia każdego z nich (Rysunek~\ref{fig:gui_wytrz}). Kolor niebieski oznacza najmniej wytrzymałe drzewo, czyli znajdujące się na skraju lasu i/lub nieposiadające bliskich sąsiadów. Im korona bardziej przechodzi w kolor czerwony, drzewo klasyfikowane jest jako bardziej wytrzymałe dzięki tłumieniu wiatru przez drzewa położone w najbliższym jego otoczeniu.
+
+\begin{figure}[!h]
+	\center
+	\includegraphics[scale=1]{gui_wytrz}
+	\caption{Przykładowa wizualizacja wytrzymałości drzew.}
+	\label{fig:gui_wytrz}
+\end{figure} 
 
  Nad ramką wizualizacji znajduje się panel sterowania symulacją. Dotępne przyciski kontroli to:
 
@@ -32,7 +39,19 @@ W ramce \textbf{Świat} możemy ustawić wymiary (szerokość i długość) siat
 
 Ramka \textbf{Wir} pozwala na manipulację parametrami modelu wiru Rankine. Posiada następujące kontrolki:
 \begin{itemize}
-\item
+\item \textbf{Promień (max)} -- maksymalny promień tornada przy podłożu
+\item \textbf{Prędkość trawersalna (max)} -- maksymalna prędkość trawersalna tornada
+\item \textbf{Prędkość radialna (max)} -- maksymalna prędkość radialna tornada
+\item \textbf{Prędkość translacji} -- prędkość przemieszczania się tornada
+\item \textbf{Współrzędne początku} -- kolejno współrzedna x oraz y początku rozchodzenia się tornada
+\item \textbf{Kąt przemieszczania się} -- kierunek przemieszczania się tornada
+\end{itemize}
+
+Ostatnia ramka \textbf{Las} pozwala dobrać parametry oraz strategię generowania rozmieszczenia drzew. Parametr \textbf{Odstęp między drzewami} określa gwarantowany rozstaw dowolnych dwóch drzew w dowolnej strategii. Lista rozwijana o etykiecie \textbf{Rozkład drzew} pozwala wybrać sposób generowania lasu spośród następujących:
+\begin{itemize}
+\item \textbf{Jednorodny} -- drzewa rozłożone są równomiernie na całym obszarze, o odstępach określonych w poprzednej kontrolce
+\item \textbf{Losowy} -- drzewa rozmieszczone są w sposób losowy
+\item \textbf{Plama} -- las zajmuje pewien losowy, spójny obszar siatki
 \end{itemize}
 
 \begin{figure}[!h]
